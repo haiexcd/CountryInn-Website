@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motel Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="admin-auth.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="video-banner">
+            <video autoplay muted loop>
+                <source src="videos/motelVideo.mov" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </header>
+
+    <section id="welcome">
+        <h1>Welcome to Country Inn Motel</h1>
+        <p>Experience comfort and convenience at affordable prices.</p>
+    </section>
+
+    <section id="rooms">
+        <h2>Our Rooms</h2>
+        <div class="room">
+            <img src="images/queenRoom.jpg" alt="Standard Room">
+            <h3>Queen Room - $49/night</h3>
+            <p>Cozy and comfortable, perfect for solo travelers or couples. Includes queen-sized bed, private bathroom, and free WiFi.</p>
+        </div>
+        <div class="room">
+            <img src="images/doubleRoom-1.jpg" alt="Deluxe Room">
+            <h3>Double Room - $52/night</h3>
+            <p>Upgrade to a larger space with a king-sized bed, private bathroom, flat-screen TV, and complimentary toiletries.</p>
+        </div>
+        <div class="room">
+            <img src="images/twoQueensRoom.jpg" alt="Family Suite">
+            <h3>Two Queen Beds Room - $55/night</h3>
+            <p>Ideal for families, with two queen-sized beds, a mini-fridge, spacious living area, and all basic amenities.</p>
+        </div>
+        <div class="room">
+            <img src="images/executive-suite.jpg" alt="Executive Suite">
+            <h3>Disability Room - $55/night</h3>
+            <p>Designed for business travelers, includes a workspace, king-sized bed, separate lounge area, and premium amenities.</p>
+        </div>
+        <div class="room">
+            <img src="images/kingRoom.jpg" alt="Luxury Suite">
+            <h3>King Bed - $55/night</h3>
+            <p>For the ultimate experience, featuring a king-sized bed, jacuzzi, living room, and private balcony.</p>
+        </div>
+    </section>
+
+    <section id="amenities">
+        <h2>Room Amenities</h2>
+        <div class="amenity">
+            <img src="images/tv.jpg" alt="TV">
+            <p>Flat-screen TV with cable channels</p>
+        </div>
+        <div class="amenity">
+            <img src="images/bathroom.jpg" alt="Bathroom">
+            <p>Private bathroom with complimentary toiletries</p>
+        </div>
+        <div class="amenity">
+            <img src="images/sink.jpg" alt="Sink">
+            <p>Modern sink and vanity area</p>
+        </div>
+        <div class="amenity">
+            <img src="images/couch.jpg" alt="Couch">
+            <p>Comfortable couch for relaxing</p>
+        </div>
+        <div class="amenity">
+            <img src="images/tvFridge.jpg" alt="Fridge">
+            <p>Mini-fridge to store your snacks and drinks</p>
+        </div>
+        <div class="amenity">
+            <img src="images/microwave.jpg" alt="Microwave">
+            <p>Microwave for your convenience</p>
+        </div>
+    </section>
+
+    <section id="availability">
+        <h2>Room Availability</h2>
+        <p>We have a total of 50 rooms, with 5 rooms of each type available for booking. To book a room, please call us or visit in person.</p>
+        <p>Contact us at <strong>(123) 456-7890</strong> or visit us at our location to book your stay.</p>
+    </section>
+
+    <section id="admin-login">
+        <h2>Admin Login for Management</h2>
+        <p>For motel management, use our admin portal to check guests in and out, monitor room availability, and track room occupancy.</p>
+        <button id="admin-login-button">Admin Login</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Country Inn Motel. All rights reserved.</p>
+    </footer>
+</body>
+</html>
