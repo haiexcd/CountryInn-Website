@@ -16,17 +16,8 @@ mongoose.connect(process.env.MONGO_URI)
     .then(() => console.log('Connected to MongoDB'))
     .catch(err => console.error('Could not connect to MongoDB', err));
 
-// Routes
+// API Routes
 app.use('/api/rooms', require('./routes/roomRoutes'));
-
-// Serve Frontend Static Files
-const path = require('path');
-app.use(express.static(path.join(__dirname, '../frontend')));
-
-// Catch-All Route for Frontend
-app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../frontend', 'index.html'));
-});
 
 // Start the server
 const PORT = process.env.PORT || 5001;
