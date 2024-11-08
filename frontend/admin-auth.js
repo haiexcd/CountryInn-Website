@@ -30,7 +30,7 @@ function md5(string) {
 // Fetch all rooms and display them on the admin page
 async function fetchRooms() {
     try {
-        const response = await fetch('http://localhost:5001/api/rooms');
+        const response = await fetch('https://countryinn-website-backend.onrender.com/api/rooms');
         const rooms = await response.json();
         displayRooms(rooms);
     } catch (error) {
@@ -58,7 +58,7 @@ function displayRooms(rooms) {
 // Check in a room by making a POST request to the backend
 async function checkInRoom(roomId) {
     try {
-        const response = await fetch(`http://localhost:5001/api/rooms/checkin/${roomId}`, {
+        const response = await fetch(`https://countryinn-website-backend.onrender.com/api/rooms/checkin/${roomId}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -76,7 +76,7 @@ async function checkInRoom(roomId) {
 // Check out a room by making a POST request to the backend
 async function checkOutRoom(roomId) {
     try {
-        const response = await fetch(`http://localhost:5001/api/rooms/checkout/${roomId}`, {
+        const response = await fetch(`https://countryinn-website-backend.onrender.com/api/rooms/checkout/${roomId}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
