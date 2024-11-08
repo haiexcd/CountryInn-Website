@@ -36,11 +36,21 @@ header {
 }
 
 #rooms {
-    padding: 20px;
+    padding: 40px;
+}
+
+#rooms h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.rooms-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .room {
@@ -48,13 +58,15 @@ header {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: calc(33.333% - 20px);
+    max-width: 300px;
     text-align: center;
 }
 
 .room img {
     width: 100%;
-    height: auto;
+    height: 200px;  /* Set a fixed height for consistency */
+    object-fit: cover;  /* Ensures images fill the space while maintaining aspect ratio */
     border-radius: 8px;
 }
 
@@ -63,25 +75,38 @@ header {
 }
 
 #amenities {
-    padding: 20px;
+    padding: 40px 20px;
     text-align: center;
 }
 
 #amenities h2 {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+}
+
+.amenities-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .amenity {
-    display: inline-block;
-    width: 200px;
-    margin: 15px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: calc(25% - 20px);
+    max-width: 200px;
     text-align: center;
 }
 
 .amenity img {
     width: 100%;
-    height: auto;
+    height: 200px;
     border-radius: 8px;
+    object-fit: cover;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -92,7 +117,7 @@ header {
 }
 
 #availability, #admin-login {
-    padding: 20px;
+    padding: 40px 20px;
     text-align: center;
 }
 
@@ -120,16 +145,13 @@ footer {
 }
 
 @media (max-width: 768px) {
-    #rooms {
-        flex-direction: column;
-        align-items: center;
-    }
-
     .room {
         width: 90%;
+        max-width: 90%;
     }
 
     .amenity {
         width: 90%;
+        max-width: 90%;
     }
 }
