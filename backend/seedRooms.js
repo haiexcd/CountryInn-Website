@@ -12,13 +12,38 @@ mongoose.connect(process.env.MONGO_URI)
 // Seed Rooms Data
 const seedRooms = async () => {
     try {
-        // Define initial rooms data (50 rooms)
-        const rooms = Array.from({ length: 50 }, (_, i) => ({
-            roomNumber: i + 1,
-            type: i < 10 ? 'Queen Room' : i < 20 ? 'Double Room' : i < 30 ? 'Two Queen Beds Room' : i < 40 ? 'Disability Room' : 'King Bed',
-            price: i < 10 ? 49 : i < 20 ? 52 : i < 30 ? 55 : i < 40 ? 55 : 55,
-            isAvailable: true
-        }));
+        // Define initial rooms data (rooms 10-21, 35-50, 51-62)
+        const rooms = [];
+
+        // Rooms for Left Building (10-21)
+        for (let i = 10; i <= 21; i++) {
+            rooms.push({
+                roomNumber: i,
+                type: 'Queen Room',
+                price: 49,
+                isAvailable: true
+            });
+        }
+
+        // Rooms for Center Building (35-50)
+        for (let i = 35; i <= 50; i++) {
+            rooms.push({
+                roomNumber: i,
+                type: 'Double Room',
+                price: 52,
+                isAvailable: true
+            });
+        }
+
+        // Rooms for Office Building (51-62)
+        for (let i = 51; i <= 62; i++) {
+            rooms.push({
+                roomNumber: i,
+                type: 'King Bed',
+                price: 55,
+                isAvailable: true
+            });
+        }
 
         // Delete existing rooms to avoid duplication
         await Room.deleteMany({});
