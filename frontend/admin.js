@@ -24,7 +24,7 @@ function groupRoomsByBuilding(rooms) {
     };
 
     rooms.forEach(room => {
-        if (room.roomNumber >= 10 && room.roomNumber <= 21) {
+        if (room.roomNumber >= 10 && room.roomNumber <= 31) {
             groupedRooms.leftBuilding.push(room);
         } else if (room.roomNumber >= 35 && room.roomNumber <= 50) {
             groupedRooms.centerBuilding.push(room);
