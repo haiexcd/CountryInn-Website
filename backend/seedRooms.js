@@ -12,11 +12,11 @@ mongoose.connect(process.env.MONGO_URI)
 // Seed Rooms Data
 const seedRooms = async () => {
     try {
-        // Define initial rooms data (rooms 10-21, 35-50, 51-62)
+        // Define initial rooms data (rooms 10-31, 35-50, 51-62)
         const rooms = [];
 
-        // Rooms for Left Building (10-21)
-        for (let i = 10; i <= 21; i++) {
+        // Rooms for Left Building (10-31)
+        for (let i = 10; i <= 31; i++) {
             rooms.push({
                 roomNumber: i,
                 type: 'Queen Room',
